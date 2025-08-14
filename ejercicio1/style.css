@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    min-height: fit-content;
+  background: linear-gradient(to bottom, #0D1B2A, #8B0000, #8B0000);
+}
+
+main {
+    margin-top: 30px;
+}
+
+main > img {
+    width: 20rem;
+    height: auto;
+    filter: drop-shadow(0 0 10px black);
+}
+
+#character-list {
+    width: 15rem;
+    min-width: fit-content;
+    padding: 10px;
+    text-align: center;
+    background-color: black;
+    color: #fff09c;
+    border: #fff09c 2px solid;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    font-family: 'cinzel';
+}
+
+select:focus {
+    color: black;
+    background-color: #A67C52;
+}
+
+#imgDiv {
+    display: flex;
+    padding: 10px;
+    background:radial-gradient(#A67C52 80%, #E0E1DD);
+    border-radius: 10px;
+    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.6);
+    margin-bottom: 50px;
+}
+
+.character-image {
+    min-width: 200px;
+    width: 350px;
+    border: #fff09c solid 2px;
+    border-radius: 10px;
+}
+/* Animación fade + zoom */
+@keyframes fadeZoom {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Clase que aplicaremos al cambiar */
+.animate-image {
+  animation: fadeZoom 0.5s ease;
+}
