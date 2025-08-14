@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const imageElement = document.querySelector(".random-image");
     const namePoke = document.querySelector("#namePoke");
     
-    const randomId = Math.floor(Math.random() * 151) + 1;
+    const randomId = Math.floor(Math.random() * 1025) + 1;
     
     const apiUrl = `https://pokeapi.co/api/v2/pokemon/${randomId}`;
 
