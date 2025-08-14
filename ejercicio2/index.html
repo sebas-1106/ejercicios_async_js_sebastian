@@ -5,16 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <script src="main.js" defer></script>
-    <title>Ejercicio 2 Async</title>
+    <title>Pokémon Randomizer</title>
 </head>
 <body>
     <main>
-        <img src="assets/logo.png" alt="">
+        <img src="assets/logo.png" alt="Pokémon Logo" class="logo">
     </main>
-    <div>
-        <img class="random-image" src="" alt="">
+    <div class="pokemon-card">
+        <div class="loading">Cargando...</div>
+        <img class="random-image" src="" alt="Pokémon" style="display: none;">
+        <div class="info">
+            <p id="namePoke"></p>
+            <p id="types"></p>
+        </div>
+        <button id="shinyToggle">Cambiar a Shiny</button>
     </div>
-    <p id="namePoke"></p>
-    <p>(Recarga la pagina para obtener otro Pokemon random)</p>
+    <p class="refresh-text">(Recarga la página para obtener otro Pokémon)</p>
 </body>
 </html>

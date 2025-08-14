@@ -10,52 +10,131 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    min-height: fit-content;
-    background: linear-gradient(whitesmoke, darkcyan);
+    min-height: 100vh;
+    background: linear-gradient(180deg, whitesmoke 0%, darkcyan 100%);
+    font-family: 'Press Start 2P', cursive;
+    color: whitesmoke;
 }
 
 main {
     display: flex;
     justify-content: center;
-    width: 100vw;
-    height: fit-content;
-    margin-top: 40px;
-}
-
-main > img {
-    width: 40%;
-}
-
-div {
-    background: radial-gradient(darkslategray, rgb(36, 36, 36)) ;
-    display: flex;
-    align-items: center;
-    min-width: 150px;
-    height: auto;
-    min-height: 150px;
+    width: 100%;
     padding: 20px;
-    border: #3166ae solid 6px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.pokemon-card {
+    background: radial-gradient(circle, darkslategray, rgb(36, 36, 36));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    max-width: 400px;
+    padding: 20px;
+    border: #3166ae 6px solid;
     border-radius: 25px;
-    margin-top: 25px;
-    margin-bottom: 50px;
+    margin: 20px 0;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.pokemon-card:hover {
+    transform: scale(1.05);
 }
 
 .random-image {
     width: 100%;
-    min-width: 150px;
+    max-width: 200px;
     height: auto;
     object-fit: contain;
     border-radius: 10px;
+    display: block;
 }
 
-p {
+.loading {
+    display: none;
+    font-size: 1rem;
     color: whitesmoke;
-    font-family: "Press Start 2P";
+    text-align: center;
+    animation: pulse 1.5s infinite;
+}
+
+.loading.active {
+    display: block;
+}
+
+.info {
+    text-align: center;
+    margin: 10px 0;
 }
 
 #namePoke {
-    color: black;
+    color: #ffd700;
     margin-bottom: 10px;
     text-transform: capitalize;
+    font-size: 1.2rem;
+}
+
+#types {
+    color: whitesmoke;
+    font-size: 0.9rem;
+    text-transform: capitalize;
+}
+
+#shinyToggle {
+    background-color: #3166ae;
+    color: whitesmoke;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#shinyToggle:hover {
+    background-color: #ffd700;
+    color: black;
+}
+
+.refresh-text {
+    font-size: 0.8rem;
+    color: whitesmoke;
+    margin-bottom: 20px;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+@media (max-width: 600px) {
+    .logo {
+        max-width: 200px;
+    }
+
+    .pokemon-card {
+        min-width: 150px;
+        padding: 15px;
+    }
+
+    #namePoke {
+        font-size: 1rem;
+    }
+
+    #types {
+        font-size: 0.8rem;
+    }
+
+    #shinyToggle {
+        padding: 8px 15px;
+        font-size: 0.8rem;
+    }
 }
